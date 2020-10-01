@@ -1,7 +1,7 @@
 require 'test_helper'
-
-class RecipeControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+require "application_system_test_case"
+class RecipeControllerTest < ApplicationSystemTestCase
+  #test "viewing the index" do
+  #  visit "/"
+  #end
 end

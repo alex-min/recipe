@@ -1,24 +1,41 @@
-# README
+# Recherche de recettes
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Cette application de démo est crée avec Rails / React.
 
-Things you may want to cover:
+Prérequis a installer pour lancer l'application: ```Rails 6, Ruby 2.6.x, Node 12.x, Webpack 4.x, Postgres 12.x```
 
-* Ruby version
+Lancement de l'application en local
 
-* System dependencies
+```
+rails db:seeds # importer le fichier db/recipe.json
+rails db:setup
+rails db:migrate
+rails server
+```
 
-* Configuration
+## Tests
 
-* Database creation
+Lancer les tests:
 
-* Database initialization
+```
+rails db:test:prepare
+rails test
+```
 
-* How to run the test suite
+Les tests se trouvent dans le dossier test/ et répondent aux conventions de rails.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Deploiement
 
-* Deployment instructions
+Pour le deploiement, il vous faudra changer le mot de passe de Postgres ou utiliser la variable d'environnement DATABASE_URL utilisée par defaut par rails.
 
-* ...
+## Pistes d'ameliorations
+
+- Ajouter plus de tests, de controlleur (et Rspec)
+- Decouper le CSS et moderniser la page
+- Ajouter une checkbox qui permet de choisir la recherche entre tout les ingredients selectionés et seulement des ingredients de la liste (comme c'est le cas actuellement).
+- Ajouter des photos des recettes et importer les autres champs
+- Creer une pagination
+- Changer le receipe.json JSON importé pour récuperer un ID de marmiton, cela supprimerait les duplicats et permetterais de lancer la commande ```rails db:seed``` plusieurs fois.
+- Ameliorer le parsing d'ingredients, pour avoir une vraie liste d'ingredient au lieu de juste un pattern matching
+- Une autocompletion
+...

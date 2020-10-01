@@ -7,6 +7,7 @@ class RecipeController < ApplicationController
         ingredients = queries.map {|val| "%#{val}%" }
         render json: Recipe.joins(:ingredients)
             .where("ingredients.name ilike any (array[?])", ingredients)
-            .limit(10)
+            .distinct
+            .limit(20)
     end
 end
