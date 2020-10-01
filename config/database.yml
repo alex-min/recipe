@@ -83,5 +83,6 @@ test:
 production:
   <<: *default
   database: recipeapp_production
-  username: recipeapp
-  password: <%= ENV['RECIPEAPP_DATABASE_PASSWORD'] %>
+  host:  <%= ENV['POSTGRESQL_ADDON_HOST'] %>
+  username: <%= ENV['POSTGRESQL_ADDON_USER'] %>
+  password: <%= ENV['POSTGRESQL_ADDON_PASSWORD'] %>
