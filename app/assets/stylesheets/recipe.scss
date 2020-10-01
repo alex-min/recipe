@@ -1,5 +1,6 @@
 :root {
     font-family: "Noto Sans", "Roboto", "Droid Sans", sans-serif;
+    --secondary-color: #ea9713;
 }
 
 body {
@@ -12,7 +13,7 @@ h1 {
 }
 
 button {
-    background: #ea9713;
+    background: var(--secondary-color);
     border: 0;
     padding: 0.6em 0.5em;
     border-radius: 99em;
@@ -27,6 +28,11 @@ button {
 #search {
     background: #c7d2dd;
     padding: 1em;
+    margin-top: 1em;
+
+    li {
+        margin: 0.5em 0;
+    }
 
     button {
         margin-left: 1em;
@@ -38,4 +44,10 @@ button {
         padding: 0.5em 0.5em;
         width: 50%;
     }
+}
+
+.recipe-difficulty {
+    background: var(--secondary-color);
+    padding: 0.2em;
+    color: white;
 }
