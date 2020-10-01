@@ -1,0 +1,41 @@
+:root {
+    font-family: "Noto Sans", "Roboto", "Droid Sans", sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 64rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+button {
+    background: #ea9713;
+    border: 0;
+    padding: 0.6em 0.5em;
+    border-radius: 99em;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+#search {
+    background: #c7d2dd;
+    padding: 1em;
+
+    button {
+        margin-left: 1em;
+    }
+
+    input {
+        border: 1px solid #000040;
+        border-radius: 5px;
+        padding: 0.5em 0.5em;
+        width: 50%;
+    }
+}
