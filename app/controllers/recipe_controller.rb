@@ -3,11 +3,7 @@ class RecipeController < ApplicationController
     end
 
     def search
-        queries = params.as_json["_json"]
-        ingredients = queries.map {|val| "%#{val}%" }
-        render json: Recipe.joins(:ingredients)
-            .where("ingredients.name ilike any (array[?])", ingredients)
-            .distinct
-            .limit(20)
+        ingredients = params.as_json["_json"]
+        render json: Recipe.containing_ingredients(ingredients).limit(20)
     end
 end

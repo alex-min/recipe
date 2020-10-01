@@ -1,7 +1,6 @@
 {
     "deploy": {
         "rakegoals": [
-            "db:setup",
             "db:migrate",
             "assets:precompile"
         ]
