@@ -3,6 +3,7 @@
         "rakegoals": [
             "db:migrate",
             "assets:precompile"
-        ]
+        ],
+        "static": "/public"
     }
 }
